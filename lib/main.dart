@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(title: const Text("ThirdWheel"), leading:(new Image.asset('./ThirdWheel.png'))),
+      appBar: AppBar(title: const Text("ThirdWheel"), leading:(new Image.asset('assets/ThirdWheel.png'))),
         body: ListView(
           padding: const EdgeInsets.all(16.0),
           children: <Widget>[
