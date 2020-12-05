@@ -9,15 +9,23 @@ class Credits extends StatelessWidget {
         body: ListView(
             padding: const EdgeInsets.all(16.0),
             children: <Widget>[
-              this._buildListItem('Andrew G'),
-              this._buildListItem('Don Davis'),
-              this._buildListItem('Alex Rawson'),
+              this._buildListItem('Andrew G','https://github.com/jayhawker6'),
+              this._buildListItem('Don Davis','https://github.com/DonTheDinosaur'),
+              this._buildListItem('Alex Rawson', 'https://github.com/zombiepigdragon'),
+              this._buildListItem('Github Page', 'https://github.com/DonTheDinosaur/olatheeasthackathon'),
+              this._buildListItemnoURL('Made for the Olathe East 2020 December Hackathon using Flutter, a framework, Dart, a language, in Android studio, a studio. We found that all of these were pretty bad resources that none of us ended up liking.'),
             ]
         ));
   }
-  Widget _buildListItem(String name){
+  Widget _buildListItem(String name, String URL){
     return ListTile(
+      onTap: () => launch(URL),
         title: Text(name),
+    );
+  }
+  Widget _buildListItemnoURL(String name){
+    return ListTile(
+      title: Text(name),
     );
   }
 }
