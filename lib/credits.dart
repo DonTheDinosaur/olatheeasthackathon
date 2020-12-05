@@ -13,7 +13,7 @@ class Credits extends StatelessWidget {
               this._buildListItem('Don Davis','https://github.com/DonTheDinosaur'),
               this._buildListItem('Alex Rawson', 'https://github.com/zombiepigdragon'),
               this._buildListItem('Github Page', 'https://github.com/DonTheDinosaur/olatheeasthackathon'),
-              this._buildListItemnoURL('Made for the Olathe East 2020 December Hackathon using Flutter, a framework, Dart, a language, in Android studio, a studio. We found that all of these were pretty bad.'),
+              this._buildListItemnoURL('Made for the Olathe East 2020 December Hackathon using Flutter, a framework, Dart, a language, in Android studio, a studio. We found that all of these were pretty bad resources that none of us ended up liking.'),
             ]
         ));
   }
