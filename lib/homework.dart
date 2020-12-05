@@ -13,7 +13,7 @@ class Homework {
       context: context,
       builder: (context) {
         return SimpleDialog(
-          title: Text("Add a class"),
+          title: Text("Add a assignment"),
           contentPadding: EdgeInsets.all(8.0),
           children: <Widget>[
             popup
