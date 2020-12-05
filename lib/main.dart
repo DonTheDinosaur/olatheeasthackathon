@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           children: <Widget>[
             this._buildListItem(context, "Classes", new ClassLinks()),
-            this._buildListItem(context, "Homework", new Homework()),
+            this._buildListItem(context, "Homework", new HomeworkLinks()),
             this._buildListItem(context, "Student Resources", new StudentResources()),
             this._buildListItem(context, "Credits", new Credits())
           ],
