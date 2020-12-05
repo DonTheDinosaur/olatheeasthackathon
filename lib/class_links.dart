@@ -118,7 +118,7 @@ class _ClassLinksState extends State<ClassLinks> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Class Links'),
+        title: Text('ThirdWheel - Class Links'),
       ),
       body: _buildSuggestions(),
       floatingActionButton: FloatingActionButton(

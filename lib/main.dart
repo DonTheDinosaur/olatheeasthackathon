@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'class_links.dart';
 import 'homework.dart';
 import 'studentresources.dart';
+import 'credits.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,6 +43,7 @@ class HomePage extends StatelessWidget {
             this._buildListItem(context, "Classes", new ClassLinks()),
             this._buildListItem(context, "Homework", new Homework()),
             this._buildListItem(context, "Student Resources", new StudentResources()),
+            this._buildListItem(context, "Credits", new Credits())
           ],
         ),
     );
