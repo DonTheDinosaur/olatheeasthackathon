@@ -1,5 +1,3 @@
-// Dart Sucks
-import 'dart:html';
 import 'dart:io' as dart_io;
 
 import 'package:flutter/material.dart';
