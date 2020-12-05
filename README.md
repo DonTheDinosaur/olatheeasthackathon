@@ -1,6 +1,6 @@
 # olathe_east_hackathon
 
-A new Flutter project.
+A new Flutter project that can only go one direction. Up. Or at least compared to StudentVue
 
 ## Getting Started
 
