@@ -5,22 +5,26 @@ class StudentResources extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("ThirdWheel"), leading:(new Image.asset('./ThirdWheel.png'))),
+        appBar: AppBar(title: const Text("ThirdWheel")),
         body: ListView(
           padding: const EdgeInsets.all(16.0),
           children: <Widget>[
-          this._buildListItem('CrapVue', 'https://parentvue.olatheschools.com/PXP2_Login_Student.aspx?regenerateSessionId=True'),
-            this._buildListItem('Math Games', 'https://https://www.mathgames.com/'),
-            this._buildListItem('DecentVue', 'https://classroom.google.com'),
-            this._buildListItem('Educational Videos', 'https://www.youtube.com/results?search_query=useless+crap+nobody+needs'),
-            this._buildListItem('Answer To Life And Everything', 'https://www.youtube.com/watch?v=oHg5SJYRHA0'),
+          this._buildListItem('StudentVue', 'https://parentvue.olatheschools.com/PXP2_Login_Student.aspx?regenerateSessionId=True', './studentvue.jpg'),
+            this._buildListItem('HomePage','https://www.olatheschools.org/','./homepage.png'),
+            this._buildListItem('Math Games', 'https://www.mathgames.com/', './mathgames.jpg'),
+            this._buildListItem('Google Classroom', 'https://classroom.google.com', './classroom.png'),
+            this._buildListItem('ClassLink', 'https://launchpad.classlink.com/olatheusd233','./classlink.png'),
+            this._buildListItem('Educational Videos', 'https://www.youtube.com/results?search_query=cat+videos','./youtube.png'),
+            this._buildListItem('Answer To Life And Everything', 'https://www.youtube.com/watch?v=oHg5SJYRHA0','./illuminati.jpg'),
+            this._buildListItem('IT Help Desk', 'https://www.ismycomputeronfire.com/','./ithelpdesk.jpg'),
     ]
     ));
   }
-  Widget _buildListItem(String name, String URL){
+  Widget _buildListItem(String name, String URL, String icon){
     return ListTile(
         onTap: () => launch(URL),
       title: Text(name),
+        leading:(new Image.asset(icon))
     );
   }
 }
