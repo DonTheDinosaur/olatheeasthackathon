@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
 class Homework {
   String name;
   String url;
+  String dueDate;
 
   static Future<Homework> fromDialog(BuildContext context) async {
     print("Showing popup");
@@ -38,6 +40,7 @@ class NewClassPopup extends StatelessWidget {
     GlobalKey<FormState> _formKey = new GlobalKey();
     final _nameController = TextEditingController();
     final _urlController = TextEditingController();
+    final _dueDateController = TextEditingController();
     return Form(
       key: _formKey,
       child: Column(
@@ -66,6 +69,18 @@ class NewClassPopup extends StatelessWidget {
               labelText: "URL",
             ),
           ),
+          TextFormField(
+            controller: _dueDateController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Due date is invalid.";
+              }
+              return null;
+            },
+            decoration: InputDecoration(
+              labelText: "Due Date",
+            ),
+          ),
           ElevatedButton(
             child: Text("Add"),
             onPressed: () {
@@ -74,6 +89,7 @@ class NewClassPopup extends StatelessWidget {
                 var _class = Homework();
                 _class.name = _nameController.text;
                 _class.url = _urlController.text;
+                _class.dueDate = _dueDateController.text;
                 _notifier.value = _class;
                 Navigator.pop(context);
               }
